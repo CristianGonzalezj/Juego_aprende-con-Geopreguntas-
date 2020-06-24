@@ -1,0 +1,15 @@
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\bin\Debug\Aprende con Geo-Preguntas.exe.config
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\bin\Debug\Aprende con Geo-Preguntas.exe
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\bin\Debug\Aprende con Geo-Preguntas.pdb
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende con Geo-Preguntas.csprojAssemblyReference.cache
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende_con_Geo_Preguntas.Fifth.resources
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende_con_Geo_Preguntas.Fourth.resources
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende_con_Geo_Preguntas.Levels.resources
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende_con_Geo_Preguntas.Properties.Resources.resources
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende_con_Geo_Preguntas.Sixth.resources
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende_con_Geo_Preguntas.Start.resources
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende_con_Geo_Preguntas.Third.resources
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende con Geo-Preguntas.csproj.GenerateResource.cache
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende con Geo-Preguntas.csproj.CoreCompileInputs.cache
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende con Geo-Preguntas.exe
+C:\Users\Melvin Perdomo\source\repos\Juego_aprende-con-Geopreguntas-\Aprende con Geo-Preguntas\obj\Debug\Aprende con Geo-Preguntas.pdb
