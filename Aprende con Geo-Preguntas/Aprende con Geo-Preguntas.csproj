@@ -52,6 +52,7 @@
     <Compile Include="Fifth.Designer.cs">
       <DependentUpon>Fifth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preguntas.cs" />
     <Compile Include="Sixth.cs">
       <SubType>Form</SubType>
     </Compile>
