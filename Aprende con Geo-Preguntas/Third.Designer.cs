@@ -30,11 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Third));
-            this.bServer = new System.Windows.Forms.Button();
             this.pTiempo = new System.Windows.Forms.ProgressBar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lSetRespuestas = new System.Windows.Forms.ListBox();
-            this.tPregunta = new System.Windows.Forms.TextBox();
             this.bPlay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.p8 = new System.Windows.Forms.PictureBox();
@@ -47,6 +44,7 @@
             this.p1 = new System.Windows.Forms.PictureBox();
             this.tRuleta = new System.Windows.Forms.Timer(this.components);
             this.timerTiempo = new System.Windows.Forms.Timer(this.components);
+            this.tPregunta = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
@@ -58,16 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bServer
-            // 
-            this.bServer.Location = new System.Drawing.Point(312, 252);
-            this.bServer.Name = "bServer";
-            this.bServer.Size = new System.Drawing.Size(107, 49);
-            this.bServer.TabIndex = 14;
-            this.bServer.Text = "Iniciar Server";
-            this.bServer.UseVisualStyleBackColor = true;
-            this.bServer.Click += new System.EventHandler(this.bServer_Click);
-            // 
             // pTiempo
             // 
             this.pTiempo.Location = new System.Drawing.Point(441, 12);
@@ -77,28 +65,15 @@
             this.pTiempo.Step = 1;
             this.pTiempo.TabIndex = 13;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(527, 212);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
             // lSetRespuestas
             // 
+            this.lSetRespuestas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lSetRespuestas.FormattingEnabled = true;
-            this.lSetRespuestas.Location = new System.Drawing.Point(441, 87);
+            this.lSetRespuestas.ItemHeight = 20;
+            this.lSetRespuestas.Location = new System.Drawing.Point(453, 110);
             this.lSetRespuestas.Name = "lSetRespuestas";
-            this.lSetRespuestas.Size = new System.Drawing.Size(275, 108);
+            this.lSetRespuestas.Size = new System.Drawing.Size(146, 104);
             this.lSetRespuestas.TabIndex = 11;
-            // 
-            // tPregunta
-            // 
-            this.tPregunta.Location = new System.Drawing.Point(441, 59);
-            this.tPregunta.Name = "tPregunta";
-            this.tPregunta.Size = new System.Drawing.Size(275, 20);
-            this.tPregunta.TabIndex = 10;
             // 
             // bPlay
             // 
@@ -122,7 +97,7 @@
             this.panel1.Controls.Add(this.p3);
             this.panel1.Controls.Add(this.p2);
             this.panel1.Controls.Add(this.p1);
-            this.panel1.Location = new System.Drawing.Point(3, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 297);
             this.panel1.TabIndex = 8;
@@ -215,16 +190,24 @@
             // 
             this.timerTiempo.Interval = 1000;
             // 
+            // tPregunta
+            // 
+            this.tPregunta.AutoSize = true;
+            this.tPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPregunta.Location = new System.Drawing.Point(450, 71);
+            this.tPregunta.Name = "tPregunta";
+            this.tPregunta.Size = new System.Drawing.Size(88, 20);
+            this.tPregunta.TabIndex = 14;
+            this.tPregunta.Text = "tPregunta";
+            // 
             // Third
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 288);
-            this.Controls.Add(this.bServer);
-            this.Controls.Add(this.pTiempo);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.lSetRespuestas);
             this.Controls.Add(this.tPregunta);
+            this.Controls.Add(this.pTiempo);
+            this.Controls.Add(this.lSetRespuestas);
             this.Controls.Add(this.bPlay);
             this.Controls.Add(this.panel1);
             this.Name = "Third";
@@ -244,12 +227,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button bServer;
         private System.Windows.Forms.ProgressBar pTiempo;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox lSetRespuestas;
-        private System.Windows.Forms.TextBox tPregunta;
         private System.Windows.Forms.Button bPlay;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox p8;
@@ -262,5 +241,6 @@
         private System.Windows.Forms.PictureBox p1;
         private System.Windows.Forms.Timer tRuleta;
         private System.Windows.Forms.Timer timerTiempo;
+        private System.Windows.Forms.Label tPregunta;
     }
 }

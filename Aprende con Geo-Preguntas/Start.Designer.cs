@@ -36,6 +36,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.textBoxFecha = new System.Windows.Forms.Label();
             this.textBoxHora = new System.Windows.Forms.Label();
+            this.bServer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -92,6 +93,15 @@
             this.textBoxHora.Size = new System.Drawing.Size(0, 24);
             this.textBoxHora.TabIndex = 3;
             // 
+            // bServer
+            // 
+            this.bServer.Location = new System.Drawing.Point(419, 122);
+            this.bServer.Name = "bServer";
+            this.bServer.Size = new System.Drawing.Size(73, 42);
+            this.bServer.TabIndex = 30;
+            this.bServer.Text = "Iniciar Server";
+            this.bServer.UseVisualStyleBackColor = true;
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +109,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(492, 292);
+            this.Controls.Add(this.bServer);
             this.Controls.Add(this.textBoxHora);
             this.Controls.Add(this.textBoxFecha);
             this.Controls.Add(this.label1);
@@ -119,6 +130,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label textBoxFecha;
         private System.Windows.Forms.Label textBoxHora;
+        private System.Windows.Forms.Button bServer;
     }
 }
 

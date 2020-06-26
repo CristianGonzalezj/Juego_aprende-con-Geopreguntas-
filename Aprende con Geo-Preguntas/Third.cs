@@ -64,34 +64,34 @@ namespace Aprende_con_Geo_Preguntas
         {
             foreach (PictureBox P in Preguntas)
             {
-                P.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaImage.jpg";
+                P.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaImage.jpg";
             }
 
             switch (PictureBoxSeleccionado)
             {
                 case 1:
-                    p1.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p1.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 2:
-                    p2.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p2.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 3:
-                    p3.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p3.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 4:
-                    p4.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p4.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 5:
-                    p5.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p5.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 6:
-                    p6.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p6.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 7:
-                    p7.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p7.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 8:
-                    p8.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"GeoPreguntas\PreguntaSeleccionada.jpg";
+                    p8.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     PictureBoxSeleccionado = 0;
                     break;
             }
@@ -124,17 +124,18 @@ namespace Aprende_con_Geo_Preguntas
             Preguntas = new Preguntas(1, 3, "¿Cuál es la capital de Honduras?", 8, 10);
             ListaPreguntas.Add(Preguntas);
 
-            Respuestas = new Respuestas(1, "San Pedro Sula", true);
+            Respuestas = new Respuestas(1, "San Pedro Sula", false);
             ListaRespuestas.Add(Respuestas);
 
             Respuestas = new Respuestas(1, "Comayagua", false);
             ListaRespuestas.Add(Respuestas);
 
-            Respuestas = new Respuestas(1, "Tegucigalpa", false);
+            Respuestas = new Respuestas(1, "Tegucigalpa", true);
             ListaRespuestas.Add(Respuestas);
 
             Respuestas = new Respuestas(1, "Ninguna", false);
             ListaRespuestas.Add(Respuestas);
+
         }
 
         public void MostrarPregunta()

@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fifth));
-            this.bServer = new System.Windows.Forms.Button();
             this.pTiempo = new System.Windows.Forms.ProgressBar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lSetRespuestas = new System.Windows.Forms.ListBox();
-            this.tPregunta = new System.Windows.Forms.TextBox();
             this.bPlay = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timerTiempo = new System.Windows.Forms.Timer(this.components);
+            this.tRuleta = new System.Windows.Forms.Timer(this.components);
+            this.tPregunta = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.p8 = new System.Windows.Forms.PictureBox();
             this.p7 = new System.Windows.Forms.PictureBox();
@@ -45,9 +46,6 @@
             this.p3 = new System.Windows.Forms.PictureBox();
             this.p2 = new System.Windows.Forms.PictureBox();
             this.p1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timerTiempo = new System.Windows.Forms.Timer(this.components);
-            this.tRuleta = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
@@ -59,15 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bServer
-            // 
-            this.bServer.Location = new System.Drawing.Point(325, 218);
-            this.bServer.Name = "bServer";
-            this.bServer.Size = new System.Drawing.Size(73, 42);
-            this.bServer.TabIndex = 29;
-            this.bServer.Text = "Iniciar Server";
-            this.bServer.UseVisualStyleBackColor = true;
-            // 
             // pTiempo
             // 
             this.pTiempo.Location = new System.Drawing.Point(417, 8);
@@ -77,28 +66,15 @@
             this.pTiempo.Step = 1;
             this.pTiempo.TabIndex = 28;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(503, 208);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 27;
-            // 
             // lSetRespuestas
             // 
+            this.lSetRespuestas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lSetRespuestas.FormattingEnabled = true;
-            this.lSetRespuestas.Location = new System.Drawing.Point(417, 83);
+            this.lSetRespuestas.ItemHeight = 20;
+            this.lSetRespuestas.Location = new System.Drawing.Point(447, 96);
             this.lSetRespuestas.Name = "lSetRespuestas";
-            this.lSetRespuestas.Size = new System.Drawing.Size(275, 108);
+            this.lSetRespuestas.Size = new System.Drawing.Size(138, 104);
             this.lSetRespuestas.TabIndex = 26;
-            // 
-            // tPregunta
-            // 
-            this.tPregunta.Location = new System.Drawing.Point(417, 55);
-            this.tPregunta.Name = "tPregunta";
-            this.tPregunta.Size = new System.Drawing.Size(275, 20);
-            this.tPregunta.TabIndex = 25;
             // 
             // bPlay
             // 
@@ -111,6 +87,33 @@
             this.bPlay.UseVisualStyleBackColor = true;
             this.bPlay.Click += new System.EventHandler(this.bPlay_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(130, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 27);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Cuarto Grado";
+            // 
+            // timerTiempo
+            // 
+            this.timerTiempo.Interval = 1000;
+            // 
+            // tRuleta
+            // 
+            this.tRuleta.Tick += new System.EventHandler(this.tRuleta_Tick);
+            // 
+            // tPregunta
+            // 
+            this.tPregunta.AutoSize = true;
+            this.tPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPregunta.Location = new System.Drawing.Point(444, 60);
+            this.tPregunta.Name = "tPregunta";
+            this.tPregunta.Size = new System.Drawing.Size(57, 20);
+            this.tPregunta.TabIndex = 29;
+            this.tPregunta.Text = "label2";
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -122,10 +125,10 @@
             this.panel1.Controls.Add(this.p3);
             this.panel1.Controls.Add(this.p2);
             this.panel1.Controls.Add(this.p1);
-            this.panel1.Location = new System.Drawing.Point(14, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 8);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(303, 297);
-            this.panel1.TabIndex = 23;
+            this.panel1.TabIndex = 30;
             // 
             // p8
             // 
@@ -207,35 +210,16 @@
             this.p1.TabIndex = 0;
             this.p1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 27);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Cuarto Grado";
-            // 
-            // timerTiempo
-            // 
-            this.timerTiempo.Interval = 1000;
-            // 
-            // tRuleta
-            // 
-            this.tRuleta.Tick += new System.EventHandler(this.tRuleta_Tick);
-            // 
             // Fifth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 302);
-            this.Controls.Add(this.bServer);
-            this.Controls.Add(this.pTiempo);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.lSetRespuestas);
-            this.Controls.Add(this.tPregunta);
-            this.Controls.Add(this.bPlay);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tPregunta);
+            this.Controls.Add(this.pTiempo);
+            this.Controls.Add(this.lSetRespuestas);
+            this.Controls.Add(this.bPlay);
             this.Controls.Add(this.label1);
             this.Name = "Fifth";
             this.Text = "Form1";
@@ -254,13 +238,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button bServer;
         private System.Windows.Forms.ProgressBar pTiempo;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox lSetRespuestas;
-        private System.Windows.Forms.TextBox tPregunta;
         private System.Windows.Forms.Button bPlay;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timerTiempo;
+        private System.Windows.Forms.Timer tRuleta;
+        private System.Windows.Forms.Label tPregunta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox p8;
         private System.Windows.Forms.PictureBox p7;
@@ -270,8 +254,5 @@
         private System.Windows.Forms.PictureBox p3;
         private System.Windows.Forms.PictureBox p2;
         private System.Windows.Forms.PictureBox p1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timerTiempo;
-        private System.Windows.Forms.Timer tRuleta;
     }
 }
