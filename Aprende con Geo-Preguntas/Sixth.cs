@@ -121,7 +121,7 @@ namespace Aprende_con_Geo_Preguntas
             ListaPreguntas = new List<Preguntas>();
             ListaRespuestas = new List<Respuestas>();
 
-            Preguntas = new Preguntas(1, 3, "Seleccione un país de Europa", 8, 10);
+            Preguntas = new Preguntas(1, 6, "Seleccione un país de Europa", 8, 10);
             ListaPreguntas.Add(Preguntas);
 
             Respuestas = new Respuestas(1, "China", false);

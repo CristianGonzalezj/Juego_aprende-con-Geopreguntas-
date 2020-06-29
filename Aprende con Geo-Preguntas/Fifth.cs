@@ -121,7 +121,7 @@ namespace Aprende_con_Geo_Preguntas
             ListaPreguntas = new List<Preguntas>();
             ListaRespuestas = new List<Respuestas>();
 
-            Preguntas = new Preguntas(1, 3, "¿Cuántos países conforman el continente Americano?", 8, 10);
+            Preguntas = new Preguntas(1, 5, "¿Cuántos países conforman el continente Americano?", 8, 10);
             ListaPreguntas.Add(Preguntas);
 
             Respuestas = new Respuestas(1, "35", true);

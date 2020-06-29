@@ -183,7 +183,7 @@
             // p3
             // 
             this.p3.Image = ((System.Drawing.Image)(resources.GetObject("p3.Image")));
-            this.p3.Location = new System.Drawing.Point(120, 7);
+            this.p3.Location = new System.Drawing.Point(120, 13);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(63, 67);
             this.p3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
