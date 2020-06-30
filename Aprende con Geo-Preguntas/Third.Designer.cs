@@ -45,6 +45,10 @@
             this.tRuleta = new System.Windows.Forms.Timer(this.components);
             this.timerTiempo = new System.Windows.Forms.Timer(this.components);
             this.tPregunta = new System.Windows.Forms.Label();
+            this.tPuntos = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tEquivocaciones = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
@@ -74,6 +78,7 @@
             this.lSetRespuestas.Name = "lSetRespuestas";
             this.lSetRespuestas.Size = new System.Drawing.Size(146, 104);
             this.lSetRespuestas.TabIndex = 11;
+            this.lSetRespuestas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lSetRespuestas_MouseClick);
             // 
             // bPlay
             // 
@@ -200,11 +205,51 @@
             this.tPregunta.TabIndex = 14;
             this.tPregunta.Text = "tPregunta";
             // 
+            // tPuntos
+            // 
+            this.tPuntos.Location = new System.Drawing.Point(397, 256);
+            this.tPuntos.Multiline = true;
+            this.tPuntos.Name = "tPuntos";
+            this.tPuntos.Size = new System.Drawing.Size(53, 30);
+            this.tPuntos.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(326, 256);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Puntos";
+            // 
+            // tEquivocaciones
+            // 
+            this.tEquivocaciones.Location = new System.Drawing.Point(642, 256);
+            this.tEquivocaciones.Multiline = true;
+            this.tEquivocaciones.Name = "tEquivocaciones";
+            this.tEquivocaciones.Size = new System.Drawing.Size(53, 30);
+            this.tEquivocaciones.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(502, 259);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 20);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Equivocaciones";
+            // 
             // Third
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 288);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tEquivocaciones);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tPuntos);
             this.Controls.Add(this.tPregunta);
             this.Controls.Add(this.pTiempo);
             this.Controls.Add(this.lSetRespuestas);
@@ -242,5 +287,9 @@
         private System.Windows.Forms.Timer tRuleta;
         private System.Windows.Forms.Timer timerTiempo;
         private System.Windows.Forms.Label tPregunta;
+        private System.Windows.Forms.TextBox tPuntos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tEquivocaciones;
+        private System.Windows.Forms.Label label2;
     }
 }

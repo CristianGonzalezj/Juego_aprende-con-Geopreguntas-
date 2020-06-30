@@ -135,9 +135,8 @@ namespace Aprende_con_Geo_Preguntas
 
             Respuestas = new Respuestas(1, "Ninguna", false);
             ListaRespuestas.Add(Respuestas);
-
         }
-
+        
         public void MostrarPregunta()
         {
             tPregunta.Text = ListaPreguntas[0].Descripcion;
@@ -172,6 +171,11 @@ namespace Aprende_con_Geo_Preguntas
         private void bServer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lSetRespuestas_MouseClick(object sender, MouseEventArgs e)
+        {
+          
         }
     }
     }
