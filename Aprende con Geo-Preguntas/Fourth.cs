@@ -100,14 +100,7 @@ namespace Aprende_con_Geo_Preguntas
 
         private void MainPreguntas_Load(object sender, EventArgs e)
         {
-            P.Add(p1);
-            P.Add(p2);
-            P.Add(p3);
-            P.Add(p4);
-            P.Add(p5);
-            P.Add(p6);
-            P.Add(p7);
-            P.Add(p8);
+            
         }
 
         public int GetRandomNumber(double min, double max)
@@ -134,6 +127,141 @@ namespace Aprende_con_Geo_Preguntas
             ListaRespuestas.Add(Respuestas);
 
             Respuestas = new Respuestas(1, "Sismo", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(2, 4, "Es una capa de la tierra:", 5, 5);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(2, "Corteza", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Manto", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Núcleo", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Todas son correctas", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(3, 4, "Es una coordenada Geográfica", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(3, "Latitud", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "Meridiano", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "Ecuador", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "Ninguna", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(4, 4, "Honduras está ubicada en el continente de:", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(4, "América", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "Europa", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "África", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "Asia", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(5, 4, "¿En qué región de América se encuentra ubicada Honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(5, "América del Norte", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "América Central", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "América Insular", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "América del sur", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(6, 4, "¿Cuáles son los océanos que bañan las costas de Honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(6, "Oceáno Atlántico", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Oceáno Pacífico", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Oceáno Índico", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "a y b son correctas", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(7, 4, "El siguiente es un río de Honduras:", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(7, "Río Ulúa", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Río Amazonas", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Río Nilo", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Río Misisipi", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(8, 4, "¿Cuál es la extensión territorial de Honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(8, "112,492 m2", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "112,492 km2", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "136,700 km", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "Ninguna de las anteriores", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(9, 4, "El siguiente no es un país de Centroamérica", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(9, "Guatemala", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Panamá", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Colombia", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "El Salvador", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(10, 4, "¿Cuál de los siguientes departamentos no tiene contacto con el mar?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(10, "Cortés", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Gracias a Dios", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Comayagua", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Valle", false);
             ListaRespuestas.Add(Respuestas);
         }
 
@@ -163,9 +291,21 @@ namespace Aprende_con_Geo_Preguntas
             else
             {
                 timerTiempo.Enabled = false;
-                MessageBox.Show("Terminó!");
+                MessageBox.Show("No hay Tiempo!");
             }
 
+        }
+
+        private void Fourth_Load(object sender, EventArgs e)
+        {
+            P.Add(p1);
+            P.Add(p2);
+            P.Add(p3);
+            P.Add(p4);
+            P.Add(p5);
+            P.Add(p6);
+            P.Add(p7);
+            P.Add(p8);
         }
     }
     }

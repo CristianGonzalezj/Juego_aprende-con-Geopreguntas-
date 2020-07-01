@@ -78,7 +78,7 @@
             this.textBoxFecha.AutoSize = true;
             this.textBoxFecha.BackColor = System.Drawing.Color.Transparent;
             this.textBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFecha.Location = new System.Drawing.Point(174, 245);
+            this.textBoxFecha.Location = new System.Drawing.Point(149, 241);
             this.textBoxFecha.Name = "textBoxFecha";
             this.textBoxFecha.Size = new System.Drawing.Size(0, 24);
             this.textBoxFecha.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.textBoxHora.AutoSize = true;
             this.textBoxHora.BackColor = System.Drawing.Color.Transparent;
             this.textBoxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHora.Location = new System.Drawing.Point(358, 245);
+            this.textBoxHora.Location = new System.Drawing.Point(415, 241);
             this.textBoxHora.Name = "textBoxHora";
             this.textBoxHora.Size = new System.Drawing.Size(0, 24);
             this.textBoxHora.TabIndex = 3;
@@ -117,6 +117,7 @@
             this.Name = "Start";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Start_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

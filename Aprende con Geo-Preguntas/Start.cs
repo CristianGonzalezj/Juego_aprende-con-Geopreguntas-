@@ -26,12 +26,17 @@ namespace Aprende_con_Geo_Preguntas
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            textBoxFecha.Text = DateTime.Now.ToShortDateString();
+            textBoxFecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             textBoxHora.Text = DateTime.Now.ToShortTimeString();
+        }
+
+        private void Start_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -19,7 +19,6 @@ namespace Aprende_con_Geo_Preguntas
         List<PictureBox> P = new List<PictureBox>();
         int PictureBoxSeleccionado;
         int ImagenRandom;
-
         Preguntas Preguntas;
         Respuestas Respuestas;
         List<Preguntas> ListaPreguntas;
@@ -100,14 +99,7 @@ namespace Aprende_con_Geo_Preguntas
 
         private void MainPreguntas_Load(object sender, EventArgs e)
         {
-            P.Add(p1);
-            P.Add(p2);
-            P.Add(p3);
-            P.Add(p4);
-            P.Add(p5);
-            P.Add(p6);
-            P.Add(p7);
-            P.Add(p8);
+           
         }
 
         public int GetRandomNumber(double min, double max)
@@ -135,21 +127,171 @@ namespace Aprende_con_Geo_Preguntas
 
             Respuestas = new Respuestas(1, "Ninguna", false);
             ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(2, 3, "La cabecera departamental de cortés es:", 10, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(2, "San Pedro Sula", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Comayagua", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Tegucigalpa", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Ninguna", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(3, 3, "¿Cuántos Departamentos tiene Honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(3, "12", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "298", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "17", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "18", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(4, 3, "¿Cuál es el Departamento más grande de Honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(4, "Islas de la Bahía", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "La Paz", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "Olancho", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "Valle", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(5, 3, "El siguiente es un departamento de Honduras", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(5, "San Pedro Sula", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "Tegucigalpa", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "La ceiba", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "Ninguna es correcta", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(6, 3, "El lago de Yojoa está ubicado en el departamento de:", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(6, "Cortés", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Comayagua", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Santa Bárbara", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Todas son correctas", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(7, 3, "¿Cuál de los siguientes departamentos es una isla?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(7, "Lempira", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Intibucá", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "El Paraíso", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Islas de la Bahía", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(8, 3, "Tegucigalpa es la cabecera departamental de:", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(8, "Gracias Dios", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "Francisco Morazan", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "Ocotepeque", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "Yoro", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(9, 3, "El siguiente departamento de Honduras tiene Frontera con el mara caribe", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(9, "Atlantida", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Yoro", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "El Paraíso", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Ninguna es correcta", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(10, 3, "La moneda oficial de Honduras es:", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(10, "Peso", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Lempira", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Quetzal", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Dólar", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(11, 3, "Se le conoce como Capital Industrial de Honduras a:", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(11, "San Pedro Sula", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(11, "Tegucigalpa", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(11, "Roatán", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(11, "Copán", false);
+            ListaRespuestas.Add(Respuestas);
         }
         
         public void MostrarPregunta()
         {
-            tPregunta.Text = ListaPreguntas[0].Descripcion;
+            tPregunta.Text = ListaPreguntas[1].Descripcion;
 
             foreach (Respuestas R in ListaRespuestas)
             {
-                if (R.PreguntaID == ListaPreguntas[0].ID)
+                if (R.PreguntaID == ListaPreguntas[1].ID)
                 {
                     lSetRespuestas.Items.Add(R.Descripcion);
                 }
             }
 
-            pTiempo.Maximum = ListaPreguntas[0].Tiempo;
+            pTiempo.Maximum = ListaPreguntas[1].Tiempo;
             pTiempo.Value = pTiempo.Maximum;
             timerTiempo.Enabled = true;
         }
@@ -163,7 +305,7 @@ namespace Aprende_con_Geo_Preguntas
             else
             {
                 timerTiempo.Enabled = false;
-                MessageBox.Show("Terminó!");
+                MessageBox.Show("No hay tiempo!");
             }
 
         }
@@ -176,6 +318,18 @@ namespace Aprende_con_Geo_Preguntas
         private void lSetRespuestas_MouseClick(object sender, MouseEventArgs e)
         {
           
+        }
+
+        private void Third_Load(object sender, EventArgs e)
+        {
+            P.Add(p1);
+            P.Add(p2);
+            P.Add(p3);
+            P.Add(p4);
+            P.Add(p5);
+            P.Add(p6);
+            P.Add(p7);
+            P.Add(p8);
         }
     }
     }

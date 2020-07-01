@@ -67,7 +67,7 @@
             this.pTiempo.Name = "pTiempo";
             this.pTiempo.Size = new System.Drawing.Size(275, 23);
             this.pTiempo.Step = 1;
-            this.pTiempo.TabIndex = 13;
+            this.pTiempo.TabIndex = 6;
             // 
             // lSetRespuestas
             // 
@@ -257,6 +257,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Third";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Third_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.p8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).EndInit();

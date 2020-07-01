@@ -70,28 +70,28 @@ namespace Aprende_con_Geo_Preguntas
             switch (PictureBoxSeleccionado)
             {
                 case 1:
-                    p1.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p1.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 2:
-                    p2.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p2.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 3:
-                    p3.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p3.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 4:
-                    p4.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p4.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 5:
-                    p5.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p5.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 6:
-                    p6.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p6.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 7:
-                    p7.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p7.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     break;
                 case 8:
-                    p8.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\PreguntaSeleccionada.jpg";
+                    p8.ImageLocation = Path.GetDirectoryName(Application.StartupPath).Substring(0, Path.GetDirectoryName(Application.StartupPath).Length - 3) + @"bin\Pregunta Seleccionada.jpg";
                     PictureBoxSeleccionado = 0;
                     break;
             }
@@ -100,14 +100,7 @@ namespace Aprende_con_Geo_Preguntas
 
         private void MainPreguntas_Load(object sender, EventArgs e)
         {
-            P.Add(p1);
-            P.Add(p2);
-            P.Add(p3);
-            P.Add(p4);
-            P.Add(p5);
-            P.Add(p6);
-            P.Add(p7);
-            P.Add(p8);
+           
         }
 
         public int GetRandomNumber(double min, double max)
@@ -134,6 +127,36 @@ namespace Aprende_con_Geo_Preguntas
             ListaRespuestas.Add(Respuestas);
 
             Respuestas = new Respuestas(1, "Australia", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(2, 6, "El siguiente es un Océano:", 5, 5);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(2, "Atlántico", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Pacífico", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Índico", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(2, "Todos son correctos", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Preguntas = new Preguntas(3, 6, "¿Cuál es el continente mas grande del mundo?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(3, "América", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "Europa", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "África", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(3, "Asia", true);
             ListaRespuestas.Add(Respuestas);
         }
 
@@ -163,12 +186,22 @@ namespace Aprende_con_Geo_Preguntas
             else
             {
                 timerTiempo.Enabled = false;
-                MessageBox.Show("Terminó!");
+                MessageBox.Show("No hay Tiempo!");
             }
 
         }
 
-       
+        private void Sixth_Load(object sender, EventArgs e)
+        {
+            P.Add(p1);
+            P.Add(p2);
+            P.Add(p3);
+            P.Add(p4);
+            P.Add(p5);
+            P.Add(p6);
+            P.Add(p7);
+            P.Add(p8);
+        }
     }
 }
   

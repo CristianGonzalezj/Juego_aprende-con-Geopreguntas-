@@ -46,6 +46,10 @@
             this.p3 = new System.Windows.Forms.PictureBox();
             this.p2 = new System.Windows.Forms.PictureBox();
             this.p1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tEquivocaciones = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tPuntos = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
@@ -64,7 +68,7 @@
             this.pTiempo.Name = "pTiempo";
             this.pTiempo.Size = new System.Drawing.Size(275, 23);
             this.pTiempo.Step = 1;
-            this.pTiempo.TabIndex = 28;
+            this.pTiempo.TabIndex = 6;
             // 
             // lSetRespuestas
             // 
@@ -210,11 +214,51 @@
             this.p1.TabIndex = 0;
             this.p1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(506, 263);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 20);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Equivocaciones";
+            // 
+            // tEquivocaciones
+            // 
+            this.tEquivocaciones.Location = new System.Drawing.Point(646, 260);
+            this.tEquivocaciones.Multiline = true;
+            this.tEquivocaciones.Name = "tEquivocaciones";
+            this.tEquivocaciones.Size = new System.Drawing.Size(53, 30);
+            this.tEquivocaciones.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(330, 260);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Puntos";
+            // 
+            // tPuntos
+            // 
+            this.tPuntos.Location = new System.Drawing.Point(401, 260);
+            this.tPuntos.Multiline = true;
+            this.tPuntos.Name = "tPuntos";
+            this.tPuntos.Size = new System.Drawing.Size(53, 30);
+            this.tPuntos.TabIndex = 31;
+            // 
             // Fifth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 302);
+            this.ClientSize = new System.Drawing.Size(735, 329);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tEquivocaciones);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tPuntos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tPregunta);
             this.Controls.Add(this.pTiempo);
@@ -223,6 +267,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Fifth";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Fifth_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.p8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).EndInit();
@@ -254,5 +299,9 @@
         private System.Windows.Forms.PictureBox p3;
         private System.Windows.Forms.PictureBox p2;
         private System.Windows.Forms.PictureBox p1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tEquivocaciones;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tPuntos;
     }
 }
