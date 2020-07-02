@@ -194,6 +194,7 @@
             // 
             // timerTiempo
             // 
+            this.timerTiempo.Enabled = true;
             this.timerTiempo.Interval = 1000;
             // 
             // tPuntos

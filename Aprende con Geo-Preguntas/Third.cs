@@ -23,8 +23,7 @@ namespace Aprende_con_Geo_Preguntas
         Respuestas Respuestas;
         List<Preguntas> ListaPreguntas;
         List<Respuestas> ListaRespuestas;
-        private int Puntaje = 0;
-        private bool Index;
+
         public Third()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace Aprende_con_Geo_Preguntas
                 PictureBoxSeleccionado = 1;
 
                 CargarPreguntas();
-
+                timerTiempo_Tick(sender,e);
             }
             catch (Exception ex)
             {
@@ -116,7 +115,7 @@ namespace Aprende_con_Geo_Preguntas
             ListaPreguntas = new List<Preguntas>();
             ListaRespuestas = new List<Respuestas>();
 
-            Preguntas = new Preguntas(1, 3, "¿Cuál es la capital de Honduras?", 8, 10);
+            Preguntas = new Preguntas(1, 3, "¿Cuál es la capital de Honduras?", 10, 10);
             ListaPreguntas.Add(Preguntas);
 
             Respuestas = new Respuestas(1, "San Pedro Sula", false);
@@ -340,7 +339,6 @@ namespace Aprende_con_Geo_Preguntas
             MessageBox.Show(Respuestas.Correcta.ToString());
             ClearList();
         }
-
     }
  }
     
