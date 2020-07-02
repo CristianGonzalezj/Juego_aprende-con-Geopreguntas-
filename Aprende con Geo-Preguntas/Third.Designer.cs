@@ -44,11 +44,11 @@
             this.p1 = new System.Windows.Forms.PictureBox();
             this.tRuleta = new System.Windows.Forms.Timer(this.components);
             this.timerTiempo = new System.Windows.Forms.Timer(this.components);
-            this.tPregunta = new System.Windows.Forms.Label();
             this.tPuntos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tEquivocaciones = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tPregunta = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
@@ -79,6 +79,7 @@
             this.lSetRespuestas.Size = new System.Drawing.Size(146, 104);
             this.lSetRespuestas.TabIndex = 11;
             this.lSetRespuestas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lSetRespuestas_MouseClick);
+            this.lSetRespuestas.SelectedIndexChanged += new System.EventHandler(this.lSetRespuestas_SelectedIndexChanged);
             // 
             // bPlay
             // 
@@ -195,16 +196,6 @@
             // 
             this.timerTiempo.Interval = 1000;
             // 
-            // tPregunta
-            // 
-            this.tPregunta.AutoSize = true;
-            this.tPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tPregunta.Location = new System.Drawing.Point(450, 71);
-            this.tPregunta.Name = "tPregunta";
-            this.tPregunta.Size = new System.Drawing.Size(88, 20);
-            this.tPregunta.TabIndex = 14;
-            this.tPregunta.Text = "tPregunta";
-            // 
             // tPuntos
             // 
             this.tPuntos.Location = new System.Drawing.Point(397, 256);
@@ -241,16 +232,27 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Equivocaciones";
             // 
+            // tPregunta
+            // 
+            this.tPregunta.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPregunta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tPregunta.Location = new System.Drawing.Point(330, 56);
+            this.tPregunta.Name = "tPregunta";
+            this.tPregunta.Size = new System.Drawing.Size(386, 19);
+            this.tPregunta.TabIndex = 19;
+            // 
             // Third
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 288);
+            this.ClientSize = new System.Drawing.Size(789, 342);
+            this.Controls.Add(this.tPregunta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tEquivocaciones);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tPuntos);
-            this.Controls.Add(this.tPregunta);
             this.Controls.Add(this.pTiempo);
             this.Controls.Add(this.lSetRespuestas);
             this.Controls.Add(this.bPlay);
@@ -287,10 +289,10 @@
         private System.Windows.Forms.PictureBox p1;
         private System.Windows.Forms.Timer tRuleta;
         private System.Windows.Forms.Timer timerTiempo;
-        private System.Windows.Forms.Label tPregunta;
         private System.Windows.Forms.TextBox tPuntos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tEquivocaciones;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tPregunta;
     }
 }

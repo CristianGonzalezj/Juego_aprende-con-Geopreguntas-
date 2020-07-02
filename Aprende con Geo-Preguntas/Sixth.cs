@@ -98,9 +98,10 @@ namespace Aprende_con_Geo_Preguntas
             PictureBoxSeleccionado++;
         }
 
-        private void MainPreguntas_Load(object sender, EventArgs e)
+        public void ClearList()
         {
-           
+            tPregunta.Clear();
+            lSetRespuestas.Items.Clear();
         }
 
         public int GetRandomNumber(double min, double max)
@@ -201,6 +202,12 @@ namespace Aprende_con_Geo_Preguntas
             P.Add(p6);
             P.Add(p7);
             P.Add(p8);
+        }
+
+        private void lSetRespuestas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(Respuestas.Correcta.ToString());
+            ClearList();
         }
     }
 }

@@ -36,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timerTiempo = new System.Windows.Forms.Timer(this.components);
             this.tRuleta = new System.Windows.Forms.Timer(this.components);
-            this.tPregunta = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.p8 = new System.Windows.Forms.PictureBox();
             this.p7 = new System.Windows.Forms.PictureBox();
@@ -50,6 +49,7 @@
             this.tEquivocaciones = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tPuntos = new System.Windows.Forms.TextBox();
+            this.tPregunta = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
@@ -79,6 +79,7 @@
             this.lSetRespuestas.Name = "lSetRespuestas";
             this.lSetRespuestas.Size = new System.Drawing.Size(150, 124);
             this.lSetRespuestas.TabIndex = 26;
+            this.lSetRespuestas.SelectedIndexChanged += new System.EventHandler(this.lSetRespuestas_SelectedIndexChanged);
             // 
             // bPlay
             // 
@@ -107,16 +108,6 @@
             // tRuleta
             // 
             this.tRuleta.Tick += new System.EventHandler(this.tRuleta_Tick);
-            // 
-            // tPregunta
-            // 
-            this.tPregunta.AutoSize = true;
-            this.tPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tPregunta.Location = new System.Drawing.Point(420, 60);
-            this.tPregunta.Name = "tPregunta";
-            this.tPregunta.Size = new System.Drawing.Size(60, 24);
-            this.tPregunta.TabIndex = 29;
-            this.tPregunta.Text = "label2";
             // 
             // panel1
             // 
@@ -250,17 +241,28 @@
             this.tPuntos.Size = new System.Drawing.Size(53, 30);
             this.tPuntos.TabIndex = 30;
             // 
+            // tPregunta
+            // 
+            this.tPregunta.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tPregunta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tPregunta.Location = new System.Drawing.Point(321, 64);
+            this.tPregunta.Name = "tPregunta";
+            this.tPregunta.Size = new System.Drawing.Size(385, 19);
+            this.tPregunta.TabIndex = 34;
+            // 
             // Sixth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 332);
+            this.ClientSize = new System.Drawing.Size(736, 340);
+            this.Controls.Add(this.tPregunta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tEquivocaciones);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tPuntos);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tPregunta);
             this.Controls.Add(this.pTiempo);
             this.Controls.Add(this.lSetRespuestas);
             this.Controls.Add(this.bPlay);
@@ -289,7 +291,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timerTiempo;
         private System.Windows.Forms.Timer tRuleta;
-        private System.Windows.Forms.Label tPregunta;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox p8;
         private System.Windows.Forms.PictureBox p7;
@@ -303,5 +304,6 @@
         private System.Windows.Forms.TextBox tEquivocaciones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tPuntos;
+        private System.Windows.Forms.TextBox tPregunta;
     }
 }

@@ -23,6 +23,8 @@ namespace Aprende_con_Geo_Preguntas
         Respuestas Respuestas;
         List<Preguntas> ListaPreguntas;
         List<Respuestas> ListaRespuestas;
+        private int Puntaje = 0;
+        private bool Index;
         public Third()
         {
             InitializeComponent();
@@ -97,9 +99,10 @@ namespace Aprende_con_Geo_Preguntas
             PictureBoxSeleccionado++;
         }
 
-        private void MainPreguntas_Load(object sender, EventArgs e)
+        public void ClearList()
         {
-           
+            tPregunta.Clear();
+            lSetRespuestas.Items.Clear();
         }
 
         public int GetRandomNumber(double min, double max)
@@ -263,7 +266,7 @@ namespace Aprende_con_Geo_Preguntas
             Respuestas = new Respuestas(10, "Dólar", false);
             ListaRespuestas.Add(Respuestas);
 
-            Preguntas = new Preguntas(11, 3, "Se le conoce como Capital Industrial de Honduras a:", 8, 10);
+            Preguntas = new Preguntas(11, 3, "Se le conoce como Capital Industrial de Honduras a:", 20, 5);
             ListaPreguntas.Add(Preguntas);
 
             Respuestas = new Respuestas(11, "San Pedro Sula", true);
@@ -278,20 +281,20 @@ namespace Aprende_con_Geo_Preguntas
             Respuestas = new Respuestas(11, "Copán", false);
             ListaRespuestas.Add(Respuestas);
         }
-        
+
         public void MostrarPregunta()
         {
-            tPregunta.Text = ListaPreguntas[1].Descripcion;
+            tPregunta.Text = ListaPreguntas[0].Descripcion;
 
             foreach (Respuestas R in ListaRespuestas)
             {
-                if (R.PreguntaID == ListaPreguntas[1].ID)
+                if (R.PreguntaID == ListaPreguntas[0].ID)
                 {
                     lSetRespuestas.Items.Add(R.Descripcion);
                 }
             }
 
-            pTiempo.Maximum = ListaPreguntas[1].Tiempo;
+            pTiempo.Maximum = ListaPreguntas[0].Tiempo;
             pTiempo.Value = pTiempo.Maximum;
             timerTiempo.Enabled = true;
         }
@@ -317,7 +320,7 @@ namespace Aprende_con_Geo_Preguntas
 
         private void lSetRespuestas_MouseClick(object sender, MouseEventArgs e)
         {
-          
+
         }
 
         private void Third_Load(object sender, EventArgs e)
@@ -331,6 +334,14 @@ namespace Aprende_con_Geo_Preguntas
             P.Add(p7);
             P.Add(p8);
         }
+
+        private void lSetRespuestas_SelectedIndexChanged(object sender, EventArgs e)
+        { 
+            MessageBox.Show(Respuestas.Correcta.ToString());
+            ClearList();
+        }
+
     }
-    }
+ }
+    
 

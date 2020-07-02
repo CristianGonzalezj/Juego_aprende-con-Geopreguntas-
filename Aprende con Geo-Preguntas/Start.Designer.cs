@@ -78,7 +78,7 @@
             this.textBoxFecha.AutoSize = true;
             this.textBoxFecha.BackColor = System.Drawing.Color.Transparent;
             this.textBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFecha.Location = new System.Drawing.Point(149, 241);
+            this.textBoxFecha.Location = new System.Drawing.Point(132, 241);
             this.textBoxFecha.Name = "textBoxFecha";
             this.textBoxFecha.Size = new System.Drawing.Size(0, 24);
             this.textBoxFecha.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.textBoxHora.AutoSize = true;
             this.textBoxHora.BackColor = System.Drawing.Color.Transparent;
             this.textBoxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHora.Location = new System.Drawing.Point(415, 241);
+            this.textBoxHora.Location = new System.Drawing.Point(419, 241);
             this.textBoxHora.Name = "textBoxHora";
             this.textBoxHora.Size = new System.Drawing.Size(0, 24);
             this.textBoxHora.TabIndex = 3;
@@ -108,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(492, 292);
+            this.ClientSize = new System.Drawing.Size(512, 292);
             this.Controls.Add(this.bServer);
             this.Controls.Add(this.textBoxHora);
             this.Controls.Add(this.textBoxFecha);
