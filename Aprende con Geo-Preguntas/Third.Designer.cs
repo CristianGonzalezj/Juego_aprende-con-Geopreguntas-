@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Third));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pTiempo = new System.Windows.Forms.ProgressBar();
             this.lSetRespuestas = new System.Windows.Forms.ListBox();
             this.bPlay = new System.Windows.Forms.Button();
@@ -49,6 +50,8 @@
             this.tEquivocaciones = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tPregunta = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p7)).BeginInit();
@@ -58,14 +61,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.p3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pTiempo
             // 
-            this.pTiempo.Location = new System.Drawing.Point(441, 12);
+            this.pTiempo.Location = new System.Drawing.Point(330, 11);
             this.pTiempo.Maximum = 10;
             this.pTiempo.Name = "pTiempo";
-            this.pTiempo.Size = new System.Drawing.Size(275, 23);
+            this.pTiempo.Size = new System.Drawing.Size(383, 23);
             this.pTiempo.Step = 1;
             this.pTiempo.TabIndex = 6;
             // 
@@ -74,7 +78,7 @@
             this.lSetRespuestas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lSetRespuestas.FormattingEnabled = true;
             this.lSetRespuestas.ItemHeight = 20;
-            this.lSetRespuestas.Location = new System.Drawing.Point(453, 110);
+            this.lSetRespuestas.Location = new System.Drawing.Point(506, 104);
             this.lSetRespuestas.Name = "lSetRespuestas";
             this.lSetRespuestas.Size = new System.Drawing.Size(146, 104);
             this.lSetRespuestas.TabIndex = 11;
@@ -196,10 +200,11 @@
             // 
             this.timerTiempo.Enabled = true;
             this.timerTiempo.Interval = 1000;
+            this.timerTiempo.Tick += new System.EventHandler(this.timerTiempo_Tick_1);
             // 
             // tPuntos
             // 
-            this.tPuntos.Location = new System.Drawing.Point(397, 256);
+            this.tPuntos.Location = new System.Drawing.Point(457, 259);
             this.tPuntos.Multiline = true;
             this.tPuntos.Name = "tPuntos";
             this.tPuntos.Size = new System.Drawing.Size(53, 30);
@@ -209,7 +214,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 256);
+            this.label1.Location = new System.Drawing.Point(386, 259);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 16;
@@ -217,7 +222,7 @@
             // 
             // tEquivocaciones
             // 
-            this.tEquivocaciones.Location = new System.Drawing.Point(642, 256);
+            this.tEquivocaciones.Location = new System.Drawing.Point(756, 256);
             this.tEquivocaciones.Multiline = true;
             this.tEquivocaciones.Name = "tEquivocaciones";
             this.tEquivocaciones.Size = new System.Drawing.Size(53, 30);
@@ -227,7 +232,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(502, 259);
+            this.label2.Location = new System.Drawing.Point(616, 259);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 20);
             this.label2.TabIndex = 18;
@@ -241,14 +246,39 @@
             this.tPregunta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tPregunta.Location = new System.Drawing.Point(330, 56);
             this.tPregunta.Name = "tPregunta";
-            this.tPregunta.Size = new System.Drawing.Size(386, 19);
+            this.tPregunta.Size = new System.Drawing.Size(505, 19);
             this.tPregunta.TabIndex = 19;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Location = new System.Drawing.Point(479, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(201, 136);
+            this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Third
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 342);
+            this.ClientSize = new System.Drawing.Size(847, 342);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tPregunta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tEquivocaciones);
@@ -270,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.p3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +326,7 @@
         private System.Windows.Forms.TextBox tEquivocaciones;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tPregunta;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

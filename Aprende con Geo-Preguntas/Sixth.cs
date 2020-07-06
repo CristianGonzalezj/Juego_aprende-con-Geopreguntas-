@@ -14,12 +14,12 @@ using System.Net.Sockets;
 namespace Aprende_con_Geo_Preguntas
 {
     public partial class Sixth : Form
-    {
-        Random rnd;
+    { //Original
+        Random rnd = new Random();
         List<PictureBox> P = new List<PictureBox>();
         int PictureBoxSeleccionado;
         int ImagenRandom;
-
+        int imagera, Puntos, intento;
         Preguntas Preguntas;
         Respuestas Respuestas;
         List<Preguntas> ListaPreguntas;
@@ -31,9 +31,12 @@ namespace Aprende_con_Geo_Preguntas
 
         private void bPlay_Click(object sender, EventArgs e)
         {
+            Tabla.Clear();
+            tPregunta.Clear();
             try
             {
                 ImagenRandom = GetRandomNumber(8, 40);
+                imagera = GetRandomNumber(1, 3);
                 tRuleta.Enabled = true;
                 PictureBoxSeleccionado = 1;
 
@@ -59,7 +62,83 @@ namespace Aprende_con_Geo_Preguntas
                 MostrarPregunta();
             }
         }
+        public void ClearList()
+        {
+            tPregunta.Clear();
+            lSetRespuestas.Items.Clear();
+        }
 
+        public int GetRandomNumber(double min, double max)
+        {
+            rnd = new Random();
+            return Convert.ToInt32(rnd.NextDouble() * (max - min) + min);
+        }
+
+        private static readonly Random getrandom = new Random();
+        public static int GetRandomNumber(int min, int max)
+        {
+            lock (getrandom) 
+            {
+                return getrandom.Next(min, max);
+            }
+        }
+        DataTable Tabla = new DataTable();
+        DataRow Renglon; 
+        public void MostrarPregunta()
+        {
+            tPregunta.Text = ListaPreguntas[imagera].Descripcion;
+            foreach (Respuestas R in ListaRespuestas)
+            {
+                if (R.PreguntaID == ListaPreguntas[imagera].ID)
+                {
+                    lSetRespuestas.Items.Add(R.Descripcion);
+                    //llenar tabla 
+                    Renglon = Tabla.NewRow();
+                    Renglon[0] = R.Descripcion;
+                    Renglon[1] = R.Correcta;
+                    Tabla.Rows.Add(Renglon);
+                    dataGridView1.DataSource = Tabla;
+                    dataGridView1.Columns[1].Visible = false;
+
+                }
+                pTiempo.Maximum = ListaPreguntas[imagera].Tiempo;
+                pTiempo.Value = 0;
+                timer1.Start();
+
+            }
+        }
+        private void lSetRespuestas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(Respuestas.Correcta.ToString());
+            ClearList();
+        }
+        private void timerTiempo_Tick(object sender, EventArgs e)
+        {
+
+            if (pTiempo.Value > 0)
+            {
+                pTiempo.Value--;
+            }
+            else
+            {
+                timerTiempo.Enabled = false;
+                MessageBox.Show("No hay tiempo!");
+            }
+
+        }
+        private void Sixth_Load(object sender, EventArgs e)
+        {
+            P.Add(p1);
+            P.Add(p2);
+            P.Add(p3);
+            P.Add(p4);
+            P.Add(p5);
+            P.Add(p6);
+            P.Add(p7);
+            P.Add(p8);
+            Tabla.Columns.Add(new DataColumn("RESPUESTA")); //crear columna para la tabla
+            Tabla.Columns.Add(new DataColumn("ID"));
+        }
         private void Ruleta(ref List<PictureBox> Preguntas)
         {
             foreach (PictureBox P in Preguntas)
@@ -96,18 +175,6 @@ namespace Aprende_con_Geo_Preguntas
                     break;
             }
             PictureBoxSeleccionado++;
-        }
-
-        public void ClearList()
-        {
-            tPregunta.Clear();
-            lSetRespuestas.Items.Clear();
-        }
-
-        public int GetRandomNumber(double min, double max)
-        {
-            rnd = new Random();
-            return Convert.ToInt32(rnd.NextDouble() * (max - min) + min);
         }
 
         public void CargarPreguntas()
@@ -161,54 +228,63 @@ namespace Aprende_con_Geo_Preguntas
             ListaRespuestas.Add(Respuestas);
         }
 
-        public void MostrarPregunta()
+        private void tPregunta_TextChanged(object sender, EventArgs e)
         {
-            tPregunta.Text = ListaPreguntas[0].Descripcion;
 
-            foreach (Respuestas R in ListaRespuestas)
-            {
-                if (R.PreguntaID == ListaPreguntas[0].ID)
-                {
-                    lSetRespuestas.Items.Add(R.Descripcion);
-                }
-            }
-
-            pTiempo.Maximum = ListaPreguntas[0].Tiempo;
-            pTiempo.Value = pTiempo.Maximum;
-            timerTiempo.Enabled = true;
         }
-
-        private void timerTiempo_Tick(object sender, EventArgs e)
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (pTiempo.Value > 0)
+            int Renglonn = e.RowIndex;
+            string resp = dataGridView1.Rows[Renglonn].Cells[1].Value.ToString();
+            if (resp == "True")
             {
-                pTiempo.Value--;
+                MessageBox.Show("Respuesta Correcta");
+                Puntos = Puntos + ListaPreguntas[imagera].Valor;//sumar respuestas correctas
+                tPuntos.Text = Puntos.ToString(); //asignar respuetas a textbox
             }
             else
             {
-                timerTiempo.Enabled = false;
-                MessageBox.Show("No hay Tiempo!");
+                MessageBox.Show("Respuesta Incorrecta");
+                intento++; //sumar equivocaciones
+                tEquivocaciones.Text = intento.ToString();//asignar a textbox
+            }
+            if (intento == 3)
+            {
+                MessageBox.Show("Alcanzo el numero maximo de intentos ");
+                this.Close();
+                Levels Levels = new Levels();
+                Levels.Show();
+            }
+            Tabla.Clear();//limpiar tabla
+            tPregunta.Clear();
+            pTiempo.Value = 0;
+            timer1.Stop();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pTiempo.Increment(1);
+            
+            if (pTiempo.Value == ListaPreguntas[imagera].Tiempo)
+            {
+              
+                timer1.Stop();
+                Tabla.Clear();
+                tPregunta.Clear();
+                MessageBox.Show("Se Acabo El Tiempo");
+                intento++;
+                tEquivocaciones.Text = intento.ToString();
+                if (intento == 3)
+                {
+                    MessageBox.Show("Alcanzo el numero maximo de intentos ");
+                    this.Close();
+                    Levels Levels = new Levels();
+                    Levels.Show();
+                }
             }
 
         }
-
-        private void Sixth_Load(object sender, EventArgs e)
-        {
-            P.Add(p1);
-            P.Add(p2);
-            P.Add(p3);
-            P.Add(p4);
-            P.Add(p5);
-            P.Add(p6);
-            P.Add(p7);
-            P.Add(p8);
-        }
-
-        private void lSetRespuestas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show(Respuestas.Correcta.ToString());
-            ClearList();
-        }
     }
-}
-  
+
+       
+    }
+
