@@ -36,7 +36,7 @@ namespace Aprende_con_Geo_Preguntas
             try
             {
                 ImagenRandom = GetRandomNumber(8, 40);
-                imagera = GetRandomNumber(1, 7);
+                imagera = GetRandomNumber(1, 9);
                 tRuleta.Enabled = true;
                 PictureBoxSeleccionado = 1;
                 CargarPreguntas();
@@ -279,6 +279,48 @@ namespace Aprende_con_Geo_Preguntas
             ListaRespuestas.Add(Respuestas);
 
             Respuestas = new Respuestas(7, "Canadá", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(8, 5, "¿Cuál es el punto más alto de honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(8, "El picacho (Tegucigalpa)", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "El merendon (San Pedro Sula)", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "Pico de Celaque(Lempira)", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "Ninguna", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(9, 5, "¿Cuál es el grupo étnico mas numeroso de Honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(9, "Lencas", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Misquitos", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Chortis", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Tolupanes", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(10, 5, "¿Qué dia se celebra la disque independencia de Honduras?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(10, "21 de septiembre", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "15 de septiembre", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "1 de mayo", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "29 de junio", false);
             ListaRespuestas.Add(Respuestas);
 
         }

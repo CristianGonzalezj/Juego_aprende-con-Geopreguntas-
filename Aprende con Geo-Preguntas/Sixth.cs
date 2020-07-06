@@ -36,7 +36,7 @@ namespace Aprende_con_Geo_Preguntas
             try
             {
                 ImagenRandom = GetRandomNumber(8, 40);
-                imagera = GetRandomNumber(1, 3);
+                imagera = GetRandomNumber(1, 9);
                 tRuleta.Enabled = true;
                 PictureBoxSeleccionado = 1;
 
@@ -226,12 +226,111 @@ namespace Aprende_con_Geo_Preguntas
 
             Respuestas = new Respuestas(3, "Asia", true);
             ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(4, 6, "¿A que continente pertenece Groenlandia?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(4, "América", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "Polo Norte", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "Oceanía", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(4, "Asia", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(5, 6, "¿Cuál es el monte más grande del mundo?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(5, "Everest", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "Huascaran", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "Aconcagua", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(5, "Amazonas", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(6, 6, "Cuales el idioma oficial de Brasil?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(6, "Español", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Ingles", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Portugués", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(6, "Árabe", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(7, 6, "¿Cual de los siguientes no es un planeta?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(7, "Tierra", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Neptuno", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Jupiter", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(7, "Luna", true);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(8, 6, "¿Cual es la densidad poblacional en honduras por Km2?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(8, "100 habitantes", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "50 habitantes", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "85 habitantes", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(8, "Ninguna de las anteriores", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(9, 6, "¿Cual es la densidad poblacional a nivel mundial por Km2?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(9, "49 habitantes", true);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "200 habitantes", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "18 habitantes", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(9, "Todas son correctas", false);
+            ListaRespuestas.Add(Respuestas);
+            Preguntas = new Preguntas(10,6, "¿Cual es el país con mas agua dulce del mundo?", 8, 10);
+            ListaPreguntas.Add(Preguntas);
+
+            Respuestas = new Respuestas(10, "Estados unidos", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "China", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Honduras", false);
+            ListaRespuestas.Add(Respuestas);
+
+            Respuestas = new Respuestas(10, "Rusia", true);
+            ListaRespuestas.Add(Respuestas);
         }
 
         private void tPregunta_TextChanged(object sender, EventArgs e)
         {
 
         }
+
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int Renglonn = e.RowIndex;

@@ -37,7 +37,7 @@ namespace Aprende_con_Geo_Preguntas
             try
             {
                 ImagenRandom = GetRandomNumber(8, 40);
-                imagera = GetRandomNumber(1, 11);
+                imagera = GetRandomNumber(1, 10);
                 tRuleta.Enabled = true;
                 PictureBoxSeleccionado = 1;
                 CargarPreguntas();
@@ -154,23 +154,7 @@ namespace Aprende_con_Geo_Preguntas
         }
         private void timerTiempo_Tick(object sender, EventArgs e)
         {
-            pTiempo.Increment(1);
-            if (pTiempo.Value == ListaPreguntas[imagera].Tiempo)
-            {
-                timer1.Stop();
-                Tabla.Clear();
-                tPregunta.Clear();
-                MessageBox.Show("Se Acabo El Tiempo");
-                intento++;
-                tEquivocaciones.Text = intento.ToString();
-                if (intento == 3)
-                {
-                    MessageBox.Show("Alcanzo el numero maximo de intentos ");
-                    this.Close();
-                    Levels Levels = new Levels();
-                    Levels.Show();
-                }
-            }
+           
         }
         private void Third_Load(object sender, EventArgs e)
         {
@@ -223,6 +207,26 @@ namespace Aprende_con_Geo_Preguntas
             PictureBoxSeleccionado++;
         }
 
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            pTiempo.Increment(1);
+            if (pTiempo.Value == ListaPreguntas[imagera].Tiempo)
+            {
+                timer1.Stop();
+                Tabla.Clear();
+                tPregunta.Clear();
+                MessageBox.Show("Se Acabo El Tiempo");
+                intento++;
+                tEquivocaciones.Text = intento.ToString();
+                if (intento == 3)
+                {
+                    MessageBox.Show("Alcanzo el numero maximo de intentos ");
+                    this.Close();
+                    Levels Levels = new Levels();
+                    Levels.Show();
+                }
+            }
+        }
         public void CargarPreguntas()
         {
             ListaPreguntas = new List<Preguntas>();
@@ -396,23 +400,10 @@ namespace Aprende_con_Geo_Preguntas
 
         
 
-        private void bServer_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lSetRespuestas_MouseClick(object sender, MouseEventArgs e)
         {
 
-        }
-
-       
-
-       
-
-       
-
-       
+        } 
     }
  }
     

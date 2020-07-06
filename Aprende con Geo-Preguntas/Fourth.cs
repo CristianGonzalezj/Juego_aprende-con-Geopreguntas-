@@ -37,7 +37,7 @@ namespace Aprende_con_Geo_Preguntas
             try
             {
                 ImagenRandom = GetRandomNumber(8, 40);
-                imagera = GetRandomNumber(1, 10);
+                imagera = GetRandomNumber(1, 9);
                 tRuleta.Enabled = true;
                 PictureBoxSeleccionado = 1;
 
