@@ -307,7 +307,8 @@
             this.Controls.Add(this.bPlay);
             this.Controls.Add(this.label1);
             this.Name = "Sixth";
-            this.Text = "Form2";
+            this.ShowIcon = false;
+            this.Text = "Sexto Grado";
             this.Load += new System.EventHandler(this.Sixth_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.p8)).EndInit();

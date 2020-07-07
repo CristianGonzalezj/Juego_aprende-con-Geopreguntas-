@@ -306,7 +306,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Fifth";
             this.ShowIcon = false;
-            this.Text = "Form1";
+            this.Text = "Quinto Grado";
             this.Load += new System.EventHandler(this.Fifth_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.p8)).EndInit();
